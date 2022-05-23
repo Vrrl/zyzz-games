@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zyzz Games</title>
+    <link rel="stylesheet" href="css/_default.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-    <ul id="navbar">
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="news.asp">News</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-    </ul>
-    <div id="sidebar">
-
+    
+    <div id="sidebar" class="navbar">
+        <img src="img/menu.png" alt="" class="menu">
+        <div class="menu-opc" id="pc" onclick="setSelectedGameOpc('pc')">
+            <img src="img/pc.svg" alt="">
+            <div class="menu-opc-text">PC</div>
+        </div>
+        <div class="menu-opc" id="browser" onclick="setSelectedGameOpc('browser')">
+            <img src="img/browser.svg" alt="">
+            <div class="menu-opc-text">Browser</div>
+        </div>
+        <div class="menu-opc" id="all" onclick="setSelectedGameOpc('all')">
+            <img src="img/menu.png" alt="" style="width: 15px; height: 15px;">
+            <div class="menu-opc-text">All</div>
+        </div>
+        <img src="img/logo.png" alt="" class="logo">
+        <div class="menu-opc-fav">
+            <img src="img/star.svg" alt="">
+            <div class="menu-opc-text">My Favourites</div>
+        </div>
     </div>
     <main id="content">
 
@@ -22,5 +36,7 @@
     <footer>
         
     </footer>
+
+    <script src="js/navigation.js"></script>
 </body>
 </html>
