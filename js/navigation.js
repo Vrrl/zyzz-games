@@ -1,9 +1,8 @@
-let selectedGamePlatform = 2
+var selectedGamePlatform = 2
 
 const pc = document.getElementById("pc")
 const browser = document.getElementById("browser")
 const all = document.getElementById("all")
-
 
 function setSelectedGameOpc(opc){
     switch(opc){

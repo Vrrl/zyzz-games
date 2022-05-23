@@ -38,11 +38,14 @@
 }
 
 .logo{
-    margin-left: 50px;
+    margin-left: 75px;
 }
 
-@media (max-width: 800px)
+@media (max-width: 900px)
 {
+    .navbar{
+        justify-content: space-between;
+    }
   .logo
    {
     display: none;
@@ -50,6 +53,7 @@
 
    .menu{
     padding: 15px;
+    margin-right: 10px;
    }
 
    .menu-opc-text{
@@ -57,10 +61,11 @@
    }
 
    .menu-opc{
-       margin-left: 20px;
+       margin-left: 0;
    }
 
    .menu-opc-fav{
        padding-right: 15px;
+       flex-grow: 0;
    }
 }
