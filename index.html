@@ -10,24 +10,32 @@
 </head>
 <body>
     
-    <div id="sidebar" class="navbar">
-        <img src="img/menu.png" alt="" class="menu">
-        <div class="menu-opc" id="pc" onclick="setSelectedGameOpc('pc')">
-            <img src="img/pc.svg" alt="">
-            <div class="menu-opc-text">PC</div>
+    <div id="navbar" class="navbar">
+        <div class="nav">
+            <div class="sidebar-toggle">
+                <i></i>
+            </div>
+            <a class="nav-item" id="nav-pc" onclick="setSelectedGameOpc('pc')">
+                <img src="img/pc.svg" alt="">
+                <div class="menu-opc-text">PC</div>
+            </a>
+            <a class="nav-item" id="nav-browser" onclick="setSelectedGameOpc('browser')">
+                <img src="img/browser.svg" alt="">
+                <div class="menu-opc-text">Browser</div>
+            </a>
+            <a class="nav-item active" id="nav-all" onclick="setSelectedGameOpc('all')">
+                <img src="img/menu.png" alt="" style="width: 15px; height: 15px;">
+                <div class="menu-opc-text">All</div>
+            </a>
         </div>
-        <div class="menu-opc" id="browser" onclick="setSelectedGameOpc('browser')">
-            <img src="img/browser.svg" alt="">
-            <div class="menu-opc-text">Browser</div>
-        </div>
-        <div class="menu-opc" id="all" onclick="setSelectedGameOpc('all')">
-            <img src="img/menu.png" alt="" style="width: 15px; height: 15px;">
-            <div class="menu-opc-text">All</div>
-        </div>
-        <img src="img/logo.png" alt="" class="logo">
-        <div class="menu-opc-fav">
-            <img src="img/star.svg" alt="">
-            <div class="menu-opc-text">My Favourites</div>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <div class="nav-fav">
+            <a class="nav-item" id="nav-fav" onclick="setSelectedGameOpc('all')">
+                <img src="img/star.svg" alt="">
+                <div class="menu-opc-text">Favourites</div>
+            </a>
         </div>
     </div>
     <main id="content">
