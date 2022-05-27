@@ -4,9 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
 }
 
 body{
-    background-color: #12161C;
+    background-color: #151A21;
+    font-family: 'Roboto';
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
 }
