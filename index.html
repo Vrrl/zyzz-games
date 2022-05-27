@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zyzz Games</title>
-    <link rel="stylesheet" href="css/_default.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/content.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/_default.css" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/content.css" />
+  </head>
+  <body onload="setSelectedGameOpc('pc')">
     <div id="navbar" class="navbar">
-        <div class="nav">
-            <div class="sidebar-toggle">
-                <i></i>
-            </div>
-            <a class="nav-item" id="nav-pc" onclick="setSelectedGameOpc('pc')">
-                <img src="img/pc.svg" alt="">
-                <div class="menu-opc-text">PC</div>
-            </a>
-            <a class="nav-item" id="nav-browser" onclick="setSelectedGameOpc('browser')">
-                <img src="img/browser.svg" alt="">
-                <div class="menu-opc-text">Browser</div>
-            </a>
-            <a class="nav-item active" id="nav-all" onclick="setSelectedGameOpc('all')">
-                <img src="img/menu.png" alt="" style="width: 15px; height: 15px;">
-                <div class="menu-opc-text">All</div>
-            </a>
+      <div class="nav">
+        <div class="sidebar-toggle">
+          <i></i>
         </div>
-        <a href="#" class="logo">
-            <img src="img/logo.png" alt="">
+        <a class="nav-item" id="nav-pc" onclick="setSelectedGameOpc('pc')">
+          <img src="img/pc.svg" alt="" />
+          <div id="pc" class="menu-opc-text">PC</div>
         </a>
-        <div class="nav-fav">
-            <a class="nav-item" id="nav-fav" onclick="setSelectedGameOpc('all')">
-                <img src="img/star.svg" alt="">
-                <div class="menu-opc-text">Favourites</div>
-            </a>
-        </div>
+        <a
+          class="nav-item"
+          id="nav-browser"
+          onclick="setSelectedGameOpc('browser')"
+        >
+          <img src="img/browser.svg" alt="" />
+          <div id="browser" class="menu-opc-text">Browser</div>
+        </a>
+        <a
+          class="nav-item active"
+          id="nav-all"
+          onclick="setSelectedGameOpc('all')"
+        >
+          <img src="img/menu.png" alt="" style="width: 15px; height: 15px" />
+          <div id="all" class="menu-opc-text">All</div>
+        </a>
+      </div>
+      <a href="#" class="logo">
+        <img src="img/logo.png" alt="" />
+      </a>
+      <div class="nav-fav">
+        <a class="nav-item" id="nav-fav" onclick="setSelectedGameOpc('all')">
+          <img src="img/star.svg" alt="" />
+          <div class="menu-opc-text">Favourites</div>
+        </a>
+      </div>
     </div>
     <main id="content">
-        <div class="banner-wrapper">
-            <div id="banner-bg" style="top: 0;"></div>
-            <div class="banner">
-                <img src="https://www.mmoportugal.com/img/pirates-tides-of-fortune-logo.jpg" alt="">
-                <small>FEATURED</small>
-                <h2>Pirates: Tides of Fortune</h2>
-                <p>A free-to-play, co-op action RPG with gameplay similar to Monster Hunter.</p>
-                <button>View Game</button>
-            </div>
+      <div class="banner-wrapper">
+        <div id="banner-bg" style="top: 0"></div>
+        <div class="banner">
+          <img
+            src="https://www.mmoportugal.com/img/pirates-tides-of-fortune-logo.jpg"
+            alt=""
+          />
+          <small>FEATURED</small>
+          <h2>Pirates: Tides of Fortune</h2>
+          <p>
+            A free-to-play, co-op action RPG with gameplay similar to Monster
+            Hunter.
+          </p>
+          <button>View Game</button>
         </div>
+      </div>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer>
-        
-    </footer>
 
-    <script src="js/navigation.js"></script>
-    <script src="js/banner.js"></script>
-</body>
+    <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  -->
+    <div id="section" class="tempo">
+      <div id="box" class="box">
+          <h3>nome</h3>
+          <h5>descricao</5>
+      </div>
+    </div>
+    <button onclick="putElementsOnScreen()">+++++</button>
+
+    <style>
+      .tempo {
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+        margin-top: 20%;
+        flex-grow: 1;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .box {
+        width: 352px;
+        height: 474.46px;
+        background-color: white;
+        margin: 20px;
+        object-fit: cover;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.4);
+        border-radius: 12.3077px;
+        display: flex;
+      }
+    </style>
+
+     <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  --> <!-- ALTERAR AQUI  -->
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <footer></footer>
+
+    <script type="module" src="js/navigation.js"></script>
+    
+  </body>
 </html>
