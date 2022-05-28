@@ -12,11 +12,34 @@
     <link rel="stylesheet" href="css/content.css" />
   </head>
   <body onload="setSelectedGameOpc('pc')">
-    <div class="sidebar">
+    <nav class="sidebar" id="sidebar">
         <div class="sidebar-toggle" id="sidebar-toggle">
             <i></i>
         </div>
-    </div>
+        <ul class="menu">
+          <li class="nav-opc" id="home" onclick="setSelectedGameCategory('home')">
+            Home
+          </li>
+          <li class="nav-opc" id="pvp" onclick="setSelectedGameCategory('pvp')">
+            PVP
+          </li>
+          <li class="nav-opc" id="mmofps" onclick="setSelectedGameCategory('mmofps')">
+            mmofps
+          </li>
+          <li class="nav-opc" id="survival" onclick="setSelectedGameCategory('survival')">
+            Survival
+          </li>
+          <li class="nav-opc" id="card" onclick="setSelectedGameCategory('card')">
+            Card
+          </li>
+          <li class="nav-opc" id="fighting" onclick="setSelectedGameCategory('fighting')">
+            Fighting
+          </li>
+          <li class="nav-opc" id="shooting" onclick="setSelectedGameCategory('shooting')">
+            Shooting
+          </li>
+        </ul>
+      </nav>
     <div id="navbar" class="navbar">
       <div class="nav">
         <div class="sidebar-gap"></div>
@@ -86,33 +109,10 @@
         <button onclick="putElementsOnScreen()">+++++</button>
     </main>
 
-    <nav class="category-nav" id="sidebar">
-      <div class="nav-opc" id="home" onclick="setSelectedGameCategory('home')">
-        Home
-      </div>
-      <div class="nav-opc" id="pvp" onclick="setSelectedGameCategory('pvp')">
-        PVP
-      </div>
-      <div class="nav-opc" id="mmofps" onclick="setSelectedGameCategory('mmofps')">
-        mmofps
-      </div>
-      <div class="nav-opc" id="survival" onclick="setSelectedGameCategory('survival')">
-        Survival
-      </div>
-      <div class="nav-opc" id="card" onclick="setSelectedGameCategory('card')">
-        Card
-      </div>
-      <div class="nav-opc" id="fighting" onclick="setSelectedGameCategory('fighting')">
-        Fighting
-      </div>
-      <div class="nav-opc" id="shooting" onclick="setSelectedGameCategory('shooting')">
-        Shooting
-      </div>
-    </nav>
 
     <footer></footer>
 
-    <script  src="js/banner.js"></script>
+    <script  src="js/animations.js"></script>
     <script  src="js/sidebar.js"></script>
     <script type="module" src="js/navigation.js"></script>
     
