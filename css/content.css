@@ -2,7 +2,7 @@
     position: relative;
     height: 650px;
     width: 100%;
-
+    margin-bottom: 250px;
 }
 .banner{
     z-index: 1;
@@ -75,4 +75,31 @@
     border: none;
 
     cursor: pointer;
+}
+
+
+#content h3{
+    font-size: 22px;
+    margin: 60px;
+    color: #fff;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px;
+    justify-content: space-between;
+}
+
+.card:nth-child(4){
+    flex-basis: 100%;
+}
+
+.card{
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+    background-color: #101927;
+
+    margin: 0 auto;
 }
