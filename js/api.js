@@ -29,7 +29,17 @@ const navigationSelected = {
   2: paramsUrl.relavance
 }
 
-export async function selected (opc) {
-    const url = navigationSelected[opc]
+const categorySelected = {
+  0: "&sort-by=popularity",
+  1: "&category=pvp",
+  2: "&category=mmofps",
+  3: "&category=survival",
+  4: "&category=card",
+  5: "&category=fighting",
+  6: "&category=shooting"
+}
+
+export async function selected (gamePlatform, gameCategory) {
+    const url = `${navigationSelected[gamePlatform]}${categorySelected[gameCategory]}`
     return await getData(url);
 };

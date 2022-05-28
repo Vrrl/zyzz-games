@@ -5,7 +5,7 @@
     cursor: pointer;
     position: fixed; /* Set the navbar to fixed position */
     top: 0px;
-    z-index: 999;
+    z-index: 2;
     border-radius: 0 0 0 0;
 
     transition: 200ms;
@@ -13,4 +13,22 @@
 
 .sidebar-toggle.scrolling{
     border-radius: 0 0 80px 0;
+}
+
+.category-nav{
+    display: none;
+    position: fixed;
+    height: 100vh;
+    background-color: #151A21;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    padding: 50px;
+}
+
+.nav-opc{
+    color: white;
+    font-size: 20px;
+    padding: 20px 0px;
+    cursor: pointer;
 }
