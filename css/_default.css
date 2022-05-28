@@ -9,9 +9,11 @@
 body{
     background-color: #151A21;
     font-family: 'Roboto';
-
+    overflow-x: hidden;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 2px;

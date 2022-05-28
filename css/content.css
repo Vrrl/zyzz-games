@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     padding: 60px;
-
 }
 
 #banner-bg{
@@ -80,26 +79,162 @@
 
 #content h3{
     font-size: 22px;
-    margin: 60px;
+    padding: 20px 60px;
     color: #fff;
 }
 
-.cards{
+
+
+.cards {
     display: flex;
     flex-wrap: wrap;
-    padding: 60px;
+    color: black;
+    flex-grow: 1;
+    width: 100%;
     justify-content: space-between;
+    padding: 0 50px;
+}
+.card {
+    margin: 35px 15px;
+    width: 360px;
+    height: 400px;
+    background-color: transparent;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+    border-radius: 12.3077px;
+    display: flex;
+    flex-direction: column;
+
+    bottom: 0px;
+
+    transition: 300ms;
+
+    overflow: hidden;
+    position: relative;
 }
 
-.card:nth-child(4){
-    flex-basis: 100%;
+
+.card-bg {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
 }
 
-.card{
-    width: 300px;
-    height: 380px;
+
+.card:hover{
+    bottom: 10px;
+
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.65);
+}
+
+.card:hover .card-bg, .card:focus .card-bg {
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+
+}
+
+.card:hover .card-bg:before, .card:focus .card-bg:before {
+    display: block;
+}
+
+.card-bg:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.card .icons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
+}
+
+.card a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+
+    margin: 0 30px;
+    margin-left: auto;
+
+    display: grid;
+    place-content: center;
+
+    position: relative;
+    
+    top: 45px;
+    left: 78px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition: 200ms;
+}
+
+.card:hover a {
+    opacity: 1;
+    left: 0px;
+}
+
+.card h4{
+    color: #fff;
+    margin: 5px 30px;
+    font-size: 26px;
+
+}
+
+.card .categorys{
+    margin: 7px 30px;
+    display: flex;
+
+}
+.card span{
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    background-color: #101927;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
-    margin: 0 auto;
+.card p{
+    color: #C8C8C8;
+    margin: 0 30px 30px 30px;
+    max-height: 0;
+    opacity: 0;
+
+    transition: 300ms;
+}
+
+.card:hover p{
+    color: #C8C8C8;
+    max-height: 200px;
+    opacity: 1;
+
 }

@@ -11,13 +11,10 @@
 }
 
 
-.sidebar-toggle{
-    background: #0B0E11;
+.sidebar-gap{
     width: 80px;
     height: 80px;
-    cursor: pointer;
     margin-right: 16px;
-
 }
 
 .nav-item{
