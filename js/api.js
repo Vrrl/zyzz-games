@@ -36,7 +36,7 @@ const categorySelected = {
   3: "&category=survival",
   4: "&category=card",
   5: "&category=fighting",
-  6: "&category=shooting"
+  6: "&category=shooter"
 }
 
 export async function selected (gamePlatform, gameCategory) {
