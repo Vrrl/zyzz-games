@@ -238,3 +238,29 @@
     opacity: 1;
 
 }
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botao "Mais jogos" */
+
+#btnLoadMore{
+    position: relative;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnLoadMore:hover{
+    background-color: #e32525;
+    transform: scale(1.2);
+}
