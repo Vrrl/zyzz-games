@@ -1,4 +1,4 @@
-import { selected } from "./api.js";
+import { selected, getMainGame } from "./api.js";
 var selectedGamePlatform = 2;
 var selectedGameCategory = 0;
 var countElements = 0;
@@ -37,6 +37,7 @@ window.setSelectedGameOpc = async function (opc) {
   }
   drawSelectedGameOpc();
   cleanSection()
+  countElements = 0
   dataLoad = await selected(selectedGamePlatform, selectedGameCategory)
   actualData = []
   putElementsOnScreen(dataLoad);
@@ -69,8 +70,10 @@ window.setSelectedGameCategory = async function (opc) {
     default:
       break;
   }
+
   drawSelectedGameOpc();
   cleanSection()
+  countElements = 0
   actualData = []
   dataLoad = await selected(selectedGamePlatform, selectedGameCategory)
   putElementsOnScreen(dataLoad);
@@ -89,7 +92,9 @@ function drawSelectedGameOpc() {
     pc.style.color = "white";
     browser.style.color = "white";
     all.style.color = "white";
+    document.getElementById("big").style.display = "none"
   } else {
+    document.getElementById("big").style.display = "block"
     fav.style.color = "white"
     pc.style.color = selectedGamePlatform === 0 ? "#F23B3B" : "white";
     browser.style.color = selectedGamePlatform === 1 ? "#F23B3B" : "white";
@@ -106,9 +111,25 @@ function drawSelectedGameOpc() {
 }
 
 window.putElementsOnScreen = (data = dataLoad) => {
+  if(countElements === 0){
+    drawBigGame(data[0])
+    countElements++
+  }
+
   spliting(data.slice(countElements, countElements + 6));
   actualData = actualData.concat(data.slice(countElements, countElements + 6))
   countElements += 6;
+}
+
+async function drawBigGame(data){
+  /* const gameData = await getMainGame(data.id)
+  console.log(gameData) */
+  const bannerBG = document.getElementById("banner-bg")
+  const banner = document.getElementById("banner")
+  bannerBG.style.backgroundImage = `linear-gradient(180deg, #151A21 0%, rgba(21, 26, 33, 0.65) 50%, #151A21 100%),url('${data.thumbnail}')`
+  banner.getElementsByTagName("img")[0].src = data.thumbnail
+  banner.getElementsByTagName("h2")[0].innerHTML = data.title
+  banner.getElementsByTagName("p")[0].innerHTML = data.short_description
 }
 
 function spliting(data) {
@@ -120,6 +141,7 @@ function spliting(data) {
     cloning.getElementsByTagName('h4')[0].innerHTML = data[i].title
     cloning.getElementsByTagName('p')[0].innerHTML = data[i].short_description
     cloning.getElementsByTagName('div')[0].setAttribute("style", `background-image: linear-gradient(180deg, rgba(21, 26, 33, 0.25) 0% ,rgba(21, 26, 33, 0.95) 80%, #151A21 100%), url(${data[i].thumbnail}); `);
+    cloning.getElementsByTagName('span')[0].innerHTML = data[i].genre
     if(checkFav(data[i]))
       cloning.getElementsByTagName('a')[0].innerHTML = `<i>fav</i>`
     document.getElementById("section").appendChild(cloning);

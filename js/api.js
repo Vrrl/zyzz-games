@@ -43,3 +43,8 @@ export async function selected (gamePlatform, gameCategory) {
     const url = `${navigationSelected[gamePlatform]}${categorySelected[gameCategory]}`
     return await getData(url);
 };
+
+export async function getMainGame(gameID){
+  const url = `/game?id=${gameID}`
+  return await getData(url) 
+}
