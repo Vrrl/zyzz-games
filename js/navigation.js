@@ -143,7 +143,7 @@ function spliting(data) {
     cloning.getElementsByTagName('div')[0].setAttribute("style", `background-image: linear-gradient(180deg, rgba(21, 26, 33, 0.25) 0% ,rgba(21, 26, 33, 0.95) 80%, #151A21 100%), url(${data[i].thumbnail}); `);
     cloning.getElementsByTagName('span')[0].innerHTML = data[i].genre
     if(checkFav(data[i]))
-      cloning.getElementsByTagName('a')[0].innerHTML = `<i>fav</i>`
+      cloning.getElementsByTagName('a')[0].innerHTML = "<img src='img/Star (1).svg'>"
     document.getElementById("section").appendChild(cloning);
   }
 }
