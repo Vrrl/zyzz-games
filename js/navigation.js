@@ -122,6 +122,7 @@ window.putElementsOnScreen = (data = dataLoad) => {
     drawBigGame(data[0])
     countElements++
   }
+
   
   if(data.status === 0){
     const h3 = document.createElement("h3")
@@ -138,6 +139,9 @@ window.putElementsOnScreen = (data = dataLoad) => {
   spliting(data.slice(countElements, countElements + 6));
   actualData = actualData.concat(data.slice(countElements, countElements + 6))
   countElements += 6;
+  if(countElements >= data.length){
+    document.getElementById("btnLoadMore").style.display = "none"
+  }
 }
 
 async function drawBigGame(data){
