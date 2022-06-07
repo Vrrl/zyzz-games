@@ -1,5 +1,5 @@
 .sidebar-toggle{
-    background: #0B0E11;
+    background: #0b1118;
     width: 80px;
     height: 80px;
     cursor: pointer;
@@ -7,28 +7,43 @@
     top: 0px;
     z-index: 2;
     border-radius: 0 0 0 0;
-
+    display: grid;
+    place-content: center;
     transition: 200ms;
 }
 
+
 .sidebar-toggle.scrolling{
     border-radius: 0 0 80px 0;
+}
+
+.sidebar-toggle img{
+    margin-left: 0;
+    margin-top: 0;
+    transition: 200ms;
+}
+.sidebar-toggle.scrolling img{
+    margin-left: -27px;
+    margin-top: -22px;
 }
 
 .category-nav{
     display: none;
     position: fixed;
     height: 100vh;
-    background-color: #151A21;
+    background-color: #0b1118;
     z-index: 5;
     top: 0;
     left: 0;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .nav-opc{
     color: white;
     font-size: 20px;
-    padding: 20px 0px;
+    padding: 18px 110px 18px 60px;
     cursor: pointer;
+}
+.nav-opc:hover{
+    opacity: 0.8;
 }

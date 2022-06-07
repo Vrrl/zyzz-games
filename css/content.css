@@ -1,15 +1,20 @@
+main{
+    min-height: 100vh;
+}
+
 .banner-wrapper{
     position: relative;
     height: 650px;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
+    z-index: -1;
 }
 .banner{
     z-index: 1;
     position: inherit;
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: 60px 100px;
 }
 
 #banner-bg{
@@ -51,7 +56,6 @@
     letter-spacing: 0.05em;
     width: 620px;
     margin-bottom: 32px;
-
     color: #fff;
 }
 
@@ -79,7 +83,7 @@
 
 #content h3{
     font-size: 22px;
-    padding: 20px 60px;
+    padding: 20px 100px;
     color: #fff;
 }
 
@@ -92,7 +96,7 @@
     flex-grow: 1;
     width: 100%;
     justify-content: space-evenly;
-    padding: 0 50px;
+    padding: 0 90px;
 }
 .card {
     margin: 35px 15px;
@@ -171,6 +175,28 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: auto;
+    padding: 30px;
+}
+
+.card .icons .fav {
+    fill: #ffef00;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: 250ms;  
+}
+.card:hover .icons .fav {
+    fill: #ffef00;
+    cursor: pointer;
+    opacity: 1
+}
+
+.card .icons .platforms img{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 7px;
+    border-radius: 17px;
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
 }
 
 .card a{
@@ -206,6 +232,7 @@
     color: #fff;
     margin: 5px 30px;
     font-size: 26px;
+    max-width: 200px;
 
 }
 
@@ -252,12 +279,15 @@
     position: relative;
     font-weight: 800;
     font-size: 16px;
-    padding: 12px 16px;
+    padding: 12px 32px;
+    margin: 64px;
     border-radius: 10px;
     background-color: var(--primary);
     color: #fff;
     border: none;
     transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
 }
 
 #btnLoadMore:hover{
@@ -268,3 +298,28 @@
 .cursorpointer{
     cursor: pointer;
 }
+
+@media (max-width: 900px)
+{
+    .banner{
+        padding: 50px 50px;
+    }
+    
+    .banner > p{
+        max-width: 300px;
+    }
+    #content h3{
+        font-size: 22px;
+        padding: 20px 50px;
+    }
+    .cards {
+        padding: 0 60px;
+    }
+    .card {
+        margin: 15px 5px;
+        width: 390px;
+        border-radius: 12.3077px;
+    }
+
+}
+

@@ -1,8 +1,10 @@
 window.onscroll = () => {
     
     yOffset = window.pageYOffset
-    if(yOffset > 550) yOffset = 550
 
+
+    // BANNER
+    if(yOffset > 550) yOffset = 550
 
     distance = yOffset / 2.5;
     
@@ -13,5 +15,12 @@ window.onscroll = () => {
     document.getElementById('banner-bg').style.filter = `blur(${blur}px)`
     document.getElementById('banner-bg').style.webkitFilter = `blur(${blur}px)`
 
+    //  SIDEBAR
 
+    if(yOffset > 0){
+        document.getElementById('sidebar-toggle').classList.add('scrolling')
+    } else{
+        document.getElementById('sidebar-toggle').classList.remove('scrolling')
+        
+    }
 }

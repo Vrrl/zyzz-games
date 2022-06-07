@@ -1,123 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zyzz Games</title>
-    <link rel="stylesheet" href="css/_default.css" />
-    <link rel="stylesheet" href="css/colors.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/content.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-  </head>
-  <body onload="setSelectedGameOpc('pc')">
-    <div class="sidebar">
-        <div class="sidebar-toggle" id="sidebar-toggle">
-            <i></i>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyzz Games</title>
+  <link rel="stylesheet" href="css/_default.css" />
+  <link rel="stylesheet" href="css/colors.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/content.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body onload="setSelectedGameOpc('pc')">
+  <div class="sidebar">
+    <div class="sidebar-toggle" id="sidebar-toggle">
+      <img src="img/menu.svg" alt="">
     </div>
-    <div id="navbar" class="navbar">
-      <div class="nav">
-        <div class="sidebar-gap"></div>
-        <a class="nav-item" id="nav-pc" onclick="setSelectedGameOpc('pc')">
-          <img src="img/pc.svg" alt="" />
-          <div id="pc" class="menu-opc-text">PC</div>
-        </a>
-        <a
-          class="nav-item"
-          id="nav-browser"
-          onclick="setSelectedGameOpc('browser')"
-        >
-          <img src="img/browser.svg" alt="" />
-          <div id="browser" class="menu-opc-text">Browser</div>
-        </a>
-        <a
-          class="nav-item active"
-          id="nav-all"
-          onclick="setSelectedGameOpc('all')"
-        >
-          <img src="img/menu.png" alt="" style="width: 15px; height: 15px" />
-          <div id="all" class="menu-opc-text">All</div>
-        </a>
-      </div>
-      <a href="#" class="logo">
-        <img src="img/logo.png" alt="" />
+  </div>
+  <div id="navbar" class="navbar">
+    <div class="nav">
+      <div class="sidebar-gap"></div>
+      <a class="nav-item" id="nav-pc" onclick="setSelectedGameOpc('pc')">
+        <img src="img/pc.svg" alt="" />
+        <div id="pc" class="menu-opc-text">PC</div>
       </a>
-      <div class="nav-fav">
-        <a class="nav-item" id="nav-fav" onclick="drawFavourites()">
-          <img src="img/star.svg" alt="" />
-          <div class="menu-opc-text">Favourites</div>
-        </a>
+      <a class="nav-item" id="nav-browser" onclick="setSelectedGameOpc('browser')">
+        <img src="img/browser.svg" alt="" />
+        <div id="browser" class="menu-opc-text">Browser</div>
+      </a>
+      <a class="nav-item active" id="nav-all" onclick="setSelectedGameOpc('all')">
+        <img src="img/menu.png" alt="" style="width: 15px; height: 15px" />
+        <div id="all" class="menu-opc-text">All</div>
+      </a>
+    </div>
+    <a href="#" class="logo">
+      <img src="img/logo.png" alt="" />
+    </a>
+    <div class="nav-fav">
+      <a class="nav-item" id="nav-fav" onclick="drawFavourites()">
+        <img src="img/star.svg" alt="" />
+        <div class="menu-opc-text">Favourites</div>
+      </a>
+    </div>
+  </div>
+  <main id="content">
+    <div class="banner-wrapper" id="big">
+      <div id="banner-bg" style="top: 0"></div>
+      <div class="banner" id="banner">
+        <img src="https://www.mmoportugal.com/img/pirates-tides-of-fortune-logo.jpg" alt="" />
+        <small>FEATURED</small>
+        <h2>Pirates: Tides of Fortune</h2>
+        <p>
+          A free-to-play, co-op action RPG with gameplay similar to Monster
+          Hunter.
+        </p>
+        <button>View Game</button>
       </div>
     </div>
-    <main id="content">
-        <div class="banner-wrapper" id="big">
-            <div id="banner-bg" style="top: 0"></div>
-            <div class="banner" id="banner">
-            <img
-                src="https://www.mmoportugal.com/img/pirates-tides-of-fortune-logo.jpg"
-                alt=""
-            />
-            <small>FEATURED</small>
-            <h2>Pirates: Tides of Fortune</h2>
-            <p>
-                A free-to-play, co-op action RPG with gameplay similar to Monster
-                Hunter.
-            </p>
-            <button>View Game</button>
-            </div>
+
+    <h3>All Plataforms</h3>
+
+    <div id="section" class="cards">
+      <div id="card" class="card">
+        <div class="card-bg"></div>
+        <div class="icons">
+          <img class="fav" src="./img/Star (2).svg">
+          <div class="platforms"></div>
         </div>
-
-        <h3>All Plataforms</h3>
-
-        <div id="section" class="cards">
-            <div id="card" class="card">
-                <div class="card-bg"></div>
-                <div class="icons"></div>
-                <a href"#"><img src="./img/Star (2).svg"></a>
-                <h4 class="cursorpointer">Game Name</h4>
-                <div class="categorys">
-                    <span>Game Category</span>
-                </div>
-                <p>Game Description</p>
-            </div>
+        <a href"#"><img src="img/link.svg" alt=""></a>
+        <h4 class="cursorpointer">Game Name</h4>
+        <div class="categorys">
+          <span>Game Category</span>
         </div>
-        <div class="container">
-          <button id="btnLoadMore" onclick="putElementsOnScreen()">More</button>
-        </div>
-    </main>
+        <p>Game Description</p>
+      </div>
+    </div>
+    <div class="container">
+      <button id="btnLoadMore" onclick="putElementsOnScreen()">More</button>
+    </div>
+  </main>
 
-    <nav class="category-nav" id="sidebar">
-      <div class="nav-opc" id="home" onclick="setSelectedGameCategory('home')">
-        Home
-      </div>
-      <div class="nav-opc" id="pvp" onclick="setSelectedGameCategory('pvp')">
-        PVP
-      </div>
-      <div class="nav-opc" id="mmofps" onclick="setSelectedGameCategory('mmofps')">
-        mmofps
-      </div>
-      <div class="nav-opc" id="survival" onclick="setSelectedGameCategory('survival')">
-        Survival
-      </div>
-      <div class="nav-opc" id="carde" onclick="setSelectedGameCategory('card')">
-        Card
-      </div>
-      <div class="nav-opc" id="fighting" onclick="setSelectedGameCategory('fighting')">
-        Fighting
-      </div>
-      <div class="nav-opc" id="shooting" onclick="setSelectedGameCategory('shooting')">
-        Shooting
-      </div>
-    </nav>
+  <nav class="category-nav" id="sidebar">
+    <div class="nav-opc" id="home" onclick="setSelectedGameCategory('home')">
+      Home
+    </div>
+    <div class="nav-opc" id="pvp" onclick="setSelectedGameCategory('pvp')">
+      PVP
+    </div>
+    <div class="nav-opc" id="mmofps" onclick="setSelectedGameCategory('mmofps')">
+      mmofps
+    </div>
+    <div class="nav-opc" id="survival" onclick="setSelectedGameCategory('survival')">
+      Survival
+    </div>
+    <div class="nav-opc" id="carde" onclick="setSelectedGameCategory('card')">
+      Card
+    </div>
+    <div class="nav-opc" id="fighting" onclick="setSelectedGameCategory('fighting')">
+      Fighting
+    </div>
+    <div class="nav-opc" id="shooting" onclick="setSelectedGameCategory('shooting')">
+      Shooting
+    </div>
+  </nav>
 
-    <footer>a</footer>
+  <footer></footer>
 
-    <script  src="js/banner.js"></script>
-    <script  src="js/sidebar.js"></script>
-    <script type="module" src="js/navigation.js"></script>
-    
-  </body>
+  <script src="js/animations.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script type="module" src="js/navigation.js"></script>
+
+</body>
+
 </html>

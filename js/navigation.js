@@ -93,8 +93,10 @@ function drawSelectedGameOpc() {
     browser.style.color = "white";
     all.style.color = "white";
     document.getElementById("big").style.display = "none"
+    document.getElementById("btnLoadMore").style.display = "none"
   } else {
     document.getElementById("big").style.display = "block"
+    document.getElementById("btnLoadMore").style.display = "block"
     fav.style.color = "white"
     pc.style.color = selectedGamePlatform === 0 ? "#F23B3B" : "white";
     browser.style.color = selectedGamePlatform === 1 ? "#F23B3B" : "white";
@@ -135,18 +137,33 @@ async function drawBigGame(data){
 function spliting(data) {
   for (let i in data) {
     const cloning = element.cloneNode(true);
-    cloning.getElementsByTagName('a')[0].addEventListener("click", () => {
+    cloning.getElementsByClassName('fav')[0].addEventListener("click", () => {
         handleFovourites(data[i])
     })
+
     cloning.getElementsByTagName('h4')[0].innerHTML = data[i].title
-    cloning.getElementsByTagName('h4')[0].addEventListener('click', ()=>{
+    cloning.getElementsByTagName('a')[0].addEventListener('click', ()=>{
       window.open(data[i].game_url)
     })
     cloning.getElementsByTagName('p')[0].innerHTML = data[i].short_description
     cloning.getElementsByTagName('div')[0].setAttribute("style", `background-image: linear-gradient(180deg, rgba(21, 26, 33, 0.25) 0% ,rgba(21, 26, 33, 0.95) 80%, #151A21 100%), url(${data[i].thumbnail}); `);
+    
+    if (data[i].platform == "PC (Windows)"){
+      let img_platform = document.createElement("img")
+      img_platform.src = "img/pc.svg"
+      cloning.getElementsByClassName('platforms')[0].appendChild(img_platform)
+    }
+    
+    if (data[i].platform == "Web Browser"){
+      let img_platform = document.createElement("img")
+      img_platform.src = "img/browser.svg"
+      cloning.getElementsByClassName('platforms')[0].appendChild(img_platform)
+    }
+                    
+
     cloning.getElementsByTagName('span')[0].innerHTML = data[i].genre
     if(checkFav(data[i]))
-      cloning.getElementsByTagName('a')[0].innerHTML = "<img src='img/Star (1).svg'>"
+      cloning.getElementsByClassName('fav')[0].src = "img/Star (1).svg"
     document.getElementById("section").appendChild(cloning);
   }
 }
