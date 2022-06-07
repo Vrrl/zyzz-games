@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
 
 
-<img src="https://cdn.discordapp.com/attachments/882329006110801931/983829403194769429/127.0.0.1_5500_index.html_1.png" alt="Signup">
+<img src="https://cdn.discordapp.com/attachments/882329006110801931/983830273907097600/127.0.0.1_5500_index.html_2.png" alt="Signup">
 
 Figma: https://www.figma.com/file/rkfMPuc8iEeAwf8pSacK2O/Untitled
 
