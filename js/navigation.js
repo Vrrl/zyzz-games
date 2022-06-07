@@ -122,6 +122,18 @@ window.putElementsOnScreen = (data = dataLoad) => {
     drawBigGame(data[0])
     countElements++
   }
+  
+  if(data.status === 0){
+    const h3 = document.createElement("h3")
+    h3.style.color = "white"
+    h3.innerHTML = "No games found"
+    document.getElementById("section").appendChild(h3) 
+    document.getElementById("big").style.display = "none"
+    document.getElementById("btnLoadMore").style.display = "none"
+  } else {
+    document.getElementById("big").style.display = "block"
+    document.getElementById("btnLoadMore").style.display = "block"
+  }
 
   spliting(data.slice(countElements, countElements + 6));
   actualData = actualData.concat(data.slice(countElements, countElements + 6))
@@ -140,6 +152,7 @@ async function drawBigGame(data){
 }
 
 function spliting(data) {
+
   for (let i in data) {
     const cloning = element.cloneNode(true);
     cloning.getElementsByClassName('fav')[0].addEventListener("click", () => {
