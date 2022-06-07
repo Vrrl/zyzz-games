@@ -16,6 +16,7 @@ const survival = document.getElementById("survival")
 const card = document.getElementById("carde")
 const fighting = document.getElementById("fighting")
 const shooting = document.getElementById("shooting")
+const racing = document.getElementById("racing")
 const fav = document.getElementById("nav-fav")
 let dataLoad = {}
 let actualData = []
@@ -67,6 +68,9 @@ window.setSelectedGameCategory = async function (opc) {
     case "shooting":
       selectedGameCategory = 6;
       break;
+    case "racing":
+      selectedGameCategory = 7;
+      break;
     default:
       break;
   }
@@ -108,6 +112,7 @@ function drawSelectedGameOpc() {
     card.style.color = selectedGameCategory === 4 ? "#F23B3B" : "white";
     fighting.style.color = selectedGameCategory === 5 ? "#F23B3B" : "white";
     shooting.style.color = selectedGameCategory === 6 ? "#F23B3B" : "white";
+    racing.style.color = selectedGameCategory === 7 ? "#F23B3B" : "white";
   }
   
 }
