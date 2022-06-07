@@ -264,3 +264,7 @@
     background-color: #e32525;
     transform: scale(1.05);
 }
+
+.cursorpointer{
+    cursor: pointer;
+}

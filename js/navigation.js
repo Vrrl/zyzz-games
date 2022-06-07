@@ -139,6 +139,9 @@ function spliting(data) {
         handleFovourites(data[i])
     })
     cloning.getElementsByTagName('h4')[0].innerHTML = data[i].title
+    cloning.getElementsByTagName('h4')[0].addEventListener('click', ()=>{
+      window.open(data[i].game_url)
+    })
     cloning.getElementsByTagName('p')[0].innerHTML = data[i].short_description
     cloning.getElementsByTagName('div')[0].setAttribute("style", `background-image: linear-gradient(180deg, rgba(21, 26, 33, 0.25) 0% ,rgba(21, 26, 33, 0.95) 80%, #151A21 100%), url(${data[i].thumbnail}); `);
     cloning.getElementsByTagName('span')[0].innerHTML = data[i].genre
