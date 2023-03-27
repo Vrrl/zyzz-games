@@ -1,5 +1,8 @@
 main{
     min-height: 100vh;
+    position: absolute;/* GABIARRA PURA */
+    z-index: -1;
+
 }
 
 .banner-wrapper{
