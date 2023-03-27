@@ -54,7 +54,7 @@ main{
     font-size: 38px;
     line-height: 82px;
     letter-spacing: 0.05em;
-    width: 620px;
+    max-width: 620px;
     margin-bottom: 32px;
     color: #fff;
 }
@@ -64,7 +64,7 @@ main{
     line-height: 22px;
     letter-spacing: 0.05em;
     color: #BDBDBD;
-    width: 620px;
+    max-width: 620px;
 
     margin-bottom: 48px;
 }
@@ -305,9 +305,6 @@ main{
         padding: 50px 50px;
     }
     
-    .banner > p{
-        max-width: 300px;
-    }
     #content h3{
         font-size: 22px;
         padding: 20px 50px;

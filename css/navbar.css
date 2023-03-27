@@ -58,5 +58,29 @@
    .navbar{
         grid-template-columns: 1fr 1fr;
     }
-    
+
+}
+
+@media (max-width: 650px)
+{
+    .filter img{
+        display: none;
+    }
+    .nav-item{
+        margin: 0;
+        padding: 4px;
+    }
+
+}
+
+@media (max-width: 460px)
+{
+    .nav-fav .menu-opc-text{
+        display: none;
+    }
+
+    .nav-fav .nav-item{
+        margin: 0 8px;
+    }
+
 }
